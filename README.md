@@ -20,7 +20,7 @@ This is the second server of bananapp, a war-packaged and servlet-based backend 
 <br>
 <br>
 
-##U ser flow:
+## User flow:
 #### 1 - Welcome page
 ![alt text](https://raw.githubusercontent.com/k-wasilewski/bananas/master/screenshots/welcome-page.png)
 This is the initial page that anyone can access.
