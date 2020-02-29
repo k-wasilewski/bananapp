@@ -1,6 +1,6 @@
-# 'bananapp': (Spring & React.js) + (Google App Engine)
+# 'bananapp': (Spring & React.js) + (Google App Engine) - Docker
 
-An application for predicting banana age with image recognition, managing user accounts and their personal bananas. 
+An application for predicting banana age with image recognition, managing user accounts and their personal bananas - deployed on Docker.
 
 The structure is as follows: <br>
 (backend1 + frontend): 'spring-and-react' <br>
