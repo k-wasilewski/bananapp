@@ -17,7 +17,7 @@ The server utilizes Spring Security and Hibernate for login and registration, an
 ### 'bananapp-react': (React.js frontend)
 This is the frontend of bananapp, a React.js app, communicating with the two servers by ajax calls.
 
-### 'bananapp-264116': (Google App Engine servlets)
+### 'bananapp-264116': (Google App Engine backend)
 This is the second server of bananapp, a war-packaged and servlet-based backend for redirecting the ajax calls. It receives the banana images from the frontend, passes them to the Google Cloud Platform (more specifically - the custom bananapp AutoML model at Google Cloud Vision), and answers with the response (utilizing Google image labeling, based on labels defined at bananapp model) - the age of a banana and the level of certainty.
 <br>
 <br>
