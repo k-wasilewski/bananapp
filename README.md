@@ -1,21 +1,23 @@
-# 'bananapp': (Spring & React.js) + (Google App Engine) - Docker
+# 'bananapp': SpringBoot server & Google App Engine servlets + React.js client + Docker
 
 An application for predicting banana age with image recognition, managing user accounts and their personal bananas - deployed on Docker.
 
 The structure is as follows: <br>
-(backend1 + frontend): 'spring-and-react' <br>
-(backend2): 'bananapp-264116'
-
-### 'spring-and-react': (Spring & React.js)
-This is the first server and the client of bananapp, jar-packaged. It consists of a Spring Boot application and a React.js app.
+main server: 'spring-and-react' <br>
+image recognition servlets: 'bananapp-264116'<br>
+client: 'bananapp-react'
 
 The whole app consists of two RESTful backends and a frontend, which communicates with them through ajax calls.
 
-The first Spring server utilizes Spring Security and Hibernate for login and registration, and calls the second Google App Engine server for image recognition purposes.
+### 'spring-and-react': (SpringBoot backend)
+This is the server of bananapp, jar-packaged - a Spring Boot application.
 
-The frontend is entirely a React.js application, communicating with the two servers by ajax calls.
+The server utilizes Spring Security and Hibernate for login and registration, and calls the second Google App Engine server for image recognition purposes.
 
-### 'bananapp-264116': (Google App Engine)
+### 'bananapp-react': (React.js frontend)
+This is the frontend of bananapp, a React.js app, communicating with the two servers by ajax calls.
+
+### 'bananapp-264116': (Google App Engine servlets)
 This is the second server of bananapp, a war-packaged and servlet-based backend for redirecting the ajax calls. It receives the banana images from the frontend, passes them to the Google Cloud Platform (more specifically - the custom bananapp AutoML model at Google Cloud Vision), and answers with the response (utilizing Google image labeling, based on labels defined at bananapp model) - the age of a banana and the level of certainty.
 <br>
 <br>
