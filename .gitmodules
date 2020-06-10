@@ -4,3 +4,6 @@
 [submodule "spring-and-react"]
 	path = spring-and-react
 	url = https://github.com/k-wasilewski/spring-and-react
+[submodule "bananapp-react"]
+	path = bananapp-react
+	url = https://github.com/k-wasilewski/bananapp-react.git
