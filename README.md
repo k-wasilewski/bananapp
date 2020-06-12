@@ -9,7 +9,7 @@ client: 'bananapp-react'
 
 The whole app consists of two RESTful backends and a frontend, which communicates with them through ajax calls.
 
-### 'spring-and-react': (SpringBoot backend)
+### 'bananapp-spring': (SpringBoot backend)
 This is the server of bananapp, jar-packaged - a Spring Boot application.
 
 The server utilizes Spring Security and Hibernate for login and registration, and calls the second Google App Engine server for image recognition purposes.
