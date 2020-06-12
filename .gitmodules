@@ -1,9 +1,9 @@
 [submodule "bananapp-264116"]
 	path = bananapp-264116
 	url = https://github.com/k-wasilewski/bananapp-264116
-[submodule "spring-and-react"]
-	path = spring-and-react
-	url = https://github.com/k-wasilewski/spring-and-react
 [submodule "bananapp-react"]
 	path = bananapp-react
 	url = https://github.com/k-wasilewski/bananapp-react.git
+[submodule "bananapp-spring"]
+	path = bananapp-spring
+	url = https://github.com/k-wasilewski/bananapp-spring
