@@ -1,8 +1,8 @@
 version: "3"
 services:
-  frontend-backend1:
-    image: spring-and-react:latest
-    build: /home/kuba/Pulpit/CodersLab/spring-and-react/target/classes/public/auth
+  bananapp-spring:
+    container_name: bananapp-spring
+    image: bananapp-spring:latest
     ports:
       - "8081:8081"
     depends_on:
@@ -12,30 +12,41 @@ services:
       - MYSQL_USER=root
       - MYSQL_ROOT_PASSWORD=root
     volumes:
-      - /home/kuba/Pulpit/CodersLab/spring-and-react/target/classes/public/auth:/home/kuba/Pulpit/CodersLab/spring-and-react/target/classes/public/auth
+      - /home/kuba/Desktop/projects/bananapp-react/target/classes/public/auth:/home/kuba/Desktop/projects/bananapp-react/target/classes/public/auth
 
-  backend2:
-    image: bananapp:latest
-    ports:
-      - "8082:8080"
+  bananapp-react:
+    container_name: bananapp-react
+    image: bananapp-react:latest
     volumes:
-      - /home/kuba/Pulpit/CodersLab/spring-and-react/target/classes/public/auth:/home/kuba/Pulpit/CodersLab/spring-and-react/target/classes/public/auth
+      - '/node_modules'
+    ports:
+      - "8083:8083"
+    depends_on:
+      - bananapp-spring
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+
+  bananapp-264116:
+    container_name: bananapp-264116
+    image: bananapp-264116:latest
+    ports:
+      - "8082:8082"
+    volumes:
+      - /home/kuba/Desktop/projects/bananapp-react/target/classes/public/auth:/home/kuba/Desktop/projects/bananapp-react/target/classes/public/auth
 
   db:
     image: mysql:5.7
     container_name: db
-    restart: always
+    command: --character-set-server=utf8 --collation-server=utf8_general_ci --skip-character-set-client-handshake
     environment:
       - MYSQL_USER=root
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=wrojees09
     volumes:
-      - /home/kuba/Pulpit/bananas/db:/var/lib/mysql
+      - /home/db:/var/lib/mysql
 
   adminer:
    image: adminer
    ports:
       - "5000:8080"
-
-
-
